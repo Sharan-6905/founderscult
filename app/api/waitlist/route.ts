@@ -19,7 +19,7 @@ export async function POST(req: Request) {
       // Unique constraint failed
       return NextResponse.json({ error: 'Email already on the waitlist' }, { status: 409 });
     }
-    console.error("Waitlist Error:", error);
-    return NextResponse.json({ error: 'Something went wrong' }, { status: 500 });
+    console.error("Waitlist Error:", error.message || error);
+    return NextResponse.json({ error: error.message || 'Something went wrong' }, { status: 500 });
   }
 }

@@ -51,7 +51,7 @@ export default function Page() {
             <Linkedin className="w-5 h-5" />
             <span className="sr-only">LinkedIn</span>
           </a>
-          <a href="#" className="text-white/60 hover:text-white transition-colors">
+          <a href="https://x.com/TheFoundersCult?s=20" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
             </svg>
@@ -65,15 +65,22 @@ export default function Page() {
         <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
           
           {/* Floating Student Pills */}
-          <div className="absolute top-40 left-10 md:left-20 animate-bounce duration-[3000ms] hidden lg:flex items-center gap-2 bg-neon-blue text-black px-4 py-2 rounded-full font-bold border-2 border-black rotate-[-6deg] hover:scale-110 transition-transform">
+          <a href="https://www.linkedin.com/in/dhruv-pradeep-b40757344/" target="_blank" rel="noopener noreferrer" className="absolute top-40 left-10 md:left-20 animate-bounce duration-[3000ms] hidden lg:flex items-center gap-2 bg-neon-blue text-black px-4 py-2 rounded-full font-bold border-2 border-black rotate-[-6deg] hover:scale-110 transition-transform cursor-pointer">
             <span>Dhruv Pradeep</span>
-            <span className="text-xs opacity-75">• CEO</span>
-          </div>
-
-          <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" className="absolute top-60 right-10 md:right-32 animate-bounce duration-[4000ms] hidden lg:flex items-center gap-2 bg-neon-green text-black px-4 py-2 rounded-full font-bold border-2 border-black rotate-[4deg] hover:scale-110 transition-transform cursor-pointer">
-            <span>[ CTO Name ]</span>
             <Linkedin className="w-4 h-4" />
-            <span className="text-xs opacity-75">• Technical Co-Founder</span>
+            <span className="text-xs opacity-75">• Co-founder CEO</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/sharan-s-6278b3360/" target="_blank" rel="noopener noreferrer" className="absolute top-60 right-10 md:right-32 animate-bounce duration-[4000ms] hidden lg:flex items-center gap-2 bg-neon-green text-black px-4 py-2 rounded-full font-bold border-2 border-black rotate-[4deg] hover:scale-110 transition-transform cursor-pointer">
+            <span>Sharan S</span>
+            <Linkedin className="w-4 h-4" />
+            <span className="text-xs opacity-75">• Co-founder CTO</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/r-r-naveen-raj-b7247a304" target="_blank" rel="noopener noreferrer" className="absolute top-[22rem] right-20 md:right-48 animate-bounce duration-[3500ms] hidden lg:flex items-center gap-2 bg-neon-purple text-black px-4 py-2 rounded-full font-bold border-2 border-black rotate-[-2deg] hover:scale-110 transition-transform cursor-pointer">
+            <span>R.R Naveen Raj</span>
+            <Linkedin className="w-4 h-4" />
+            <span className="text-xs opacity-75">• AI Engineer</span>
           </a>
 
           <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2 text-sm font-bold text-neon-green uppercase tracking-widest mb-10">
@@ -90,7 +97,7 @@ export default function Page() {
           </h1>
 
           <p className="text-xl md:text-2xl text-white/60 font-medium max-w-2xl mx-auto mb-16 leading-tight">
-            We bridge the gap between startup ideas and co-founders. Drop a raw idea, get validation, and find your team before writing a single line of code.
+            Not content. Not clout. Just building. <br className="hidden md:block" /> Founderscult is where India's next startups begin.
           </p>
 
           {/* Waitlist Form */}
@@ -137,14 +144,34 @@ export default function Page() {
         <div className="animate-marquee flex gap-16 items-center text-4xl font-black uppercase tracking-tight text-white/40">
           <span>Post Raw Ideas</span> <span className="text-neon-green">✦</span>
           <span>Find Co-Founders</span> <span className="text-neon-blue">✦</span>
+          <span>High Agency</span> <span className="text-neon-purple">✦</span>
           <span>Zero Judgment</span> <span className="text-neon-pink">✦</span>
           
           {/* Duplicate for seamless looping */}
           <span>Post Raw Ideas</span> <span className="text-neon-green">✦</span>
           <span>Find Co-Founders</span> <span className="text-neon-blue">✦</span>
+          <span>High Agency</span> <span className="text-neon-purple">✦</span>
           <span>Zero Judgment</span> <span className="text-neon-pink">✦</span>
         </div>
       </div>
+
+      {/* Manifesto Section */}
+      <section className="py-24 border-b-2 border-white/10 relative overflow-hidden bg-white/[0.02]">
+        <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-12 md:gap-24">
+          <div className="-rotate-2 hover:rotate-0 transition-transform cursor-default">
+            <span className="text-4xl md:text-5xl font-black uppercase text-neon-green block">High Agency</span>
+          </div>
+          <div className="rotate-3 hover:rotate-0 transition-transform cursor-default">
+            <span className="text-4xl md:text-5xl font-black uppercase text-neon-blue block">Build before you're ready.</span>
+          </div>
+          <div className="-rotate-1 hover:rotate-0 transition-transform cursor-default">
+            <span className="text-4xl md:text-5xl font-black uppercase text-neon-purple block">Ideas find teams here.</span>
+          </div>
+          <div className="rotate-2 hover:rotate-0 transition-transform cursor-default">
+            <span className="text-4xl md:text-5xl font-black uppercase text-neon-pink block">Where builders begin</span>
+          </div>
+        </div>
+      </section>
 
       {/* Features Grid */}
       <section className="max-w-7xl mx-auto px-6 py-32">
@@ -163,16 +190,58 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="bg-[#0a0a0a] p-8 rounded-3xl border-2 border-white/5 hover:border-neon-blue hover:-translate-y-2 transition-all duration-300 group">
-            <div className="w-16 h-16 bg-neon-blue text-black rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-              <Users className="w-8 h-8" />
+            <div className="group p-8 rounded-3xl border-2 border-white/5 bg-white/[0.02] hover:bg-neon-blue/5 hover:border-neon-blue/50 transition-all duration-500">
+              <div className="w-16 h-16 rounded-2xl bg-neon-blue/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Users className="w-8 h-8 text-neon-blue" />
+              </div>
+              <h3 className="text-2xl font-black uppercase mb-4">Find Hustlers</h3>
+              <p className="text-white/60 font-medium leading-relaxed">
+                Connect with passionate builders and hustlers who share your vision and hunger to create.
+              </p>
             </div>
-            <h3 className="text-2xl font-black uppercase mb-4">Find Co-Founders</h3>
-            <p className="text-white/60 font-medium leading-relaxed">
-              Every upvote is a potential teammate. Connect with designers, developers, and marketers in your campus or city.
-            </p>
+
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="max-w-7xl mx-auto px-6 py-32 border-t-2 border-white/5">
+        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-16 text-center">
+          What the <span className="text-neon-pink">Cult</span> says.
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-green border-b-neon-green rotate-[-1deg] hover:rotate-0 transition-transform">
+            <p className="text-lg font-medium mb-6 italic">"Found my technical co-founder in 2 days. We're now shipping our MVP. No fluff, just builders."</p>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-neon-green" />
+              <div>
+                <p className="font-black uppercase text-sm">Adithya</p>
+                <p className="text-xs text-white/40">Building a health startup</p>
+              </div>
+            </div>
           </div>
 
+          <div className="p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-blue border-b-neon-blue rotate-[2deg] hover:rotate-0 transition-transform">
+            <p className="text-lg font-medium mb-6 italic">"Finally a community for India's real builders. The high agency vibe here is unmatched."</p>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-neon-blue" />
+              <div>
+                <p className="font-black uppercase text-sm">Riya Shah</p>
+                <p className="text-xs text-white/40">Full-stack Dev</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-purple border-b-neon-purple rotate-[-2deg] hover:rotate-0 transition-transform">
+            <p className="text-lg font-medium mb-6 italic">"The best place to find builders who actually care about shipping, not just social media clout."</p>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-neon-purple" />
+              <div>
+                <p className="font-black uppercase text-sm">Karan Malhotra</p>
+                <p className="text-xs text-white/40">Product Designer</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -182,7 +251,7 @@ export default function Page() {
           Founderscult
         </h2>
         <p className="text-white/40 mt-4 font-medium uppercase tracking-widest text-sm">
-          Designed for Builders. Coming to India.
+          Designed for Builders. Built for India’s next wave of founders.
         </p>
       </footer>
     </div>
