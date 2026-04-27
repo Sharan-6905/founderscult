@@ -69,15 +69,15 @@ export default function Page() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none" />
 
       {/* Floating Header */}
-      <header className="relative z-50 p-6 flex justify-between items-center">
-        <div className="text-2xl font-black tracking-tighter uppercase">
+      <header className="relative z-50 p-4 sm:p-6 flex justify-between items-center">
+        <div className="text-lg sm:text-2xl font-black tracking-tighter uppercase">
           Founderscult
         </div>
 
-        <div className="flex gap-6 items-center">
+        <div className="flex gap-3 sm:gap-6 items-center">
           <button 
             onClick={() => setShowDirectory(true)}
-            className="text-white/60 hover:text-neon-green font-bold uppercase tracking-widest text-xs sm:text-sm transition-colors"
+            className="text-white/60 hover:text-neon-green font-bold uppercase tracking-widest text-[10px] sm:text-sm transition-colors"
           >
             Directories
           </button>
@@ -110,7 +110,7 @@ export default function Page() {
             Waitlist Now Open
           </div>
 
-          <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-[0.9] mb-8 uppercase">
+          <h1 className="text-4xl sm:text-7xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-[0.9] mb-8 uppercase">
             Where <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-green via-neon-blue to-neon-purple">
               Ideas
@@ -137,16 +137,16 @@ export default function Page() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@student.edu.in"
-                    className="flex-1 bg-transparent px-6 py-4 text-white placeholder:text-white/30 focus:outline-none font-medium"
+                    className="flex-1 bg-transparent px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base text-white placeholder:text-white/30 focus:outline-none font-medium"
                     required
                   />
                   <button
                     type="submit"
                     disabled={loading}
-                    className="bg-white text-black font-black uppercase px-8 py-4 rounded-full hover:bg-neon-green transition-colors whitespace-nowrap flex items-center gap-2"
+                    className="bg-white text-black font-black uppercase px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-neon-green transition-colors whitespace-nowrap flex items-center gap-2 text-xs sm:text-sm"
                   >
                     {loading ? 'Joining...' : 'Join Cult'}
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                   </button>
                 </form>
               )}
@@ -294,12 +294,12 @@ export default function Page() {
             <X className="w-8 h-8" />
           </button>
 
-          <div className="max-w-5xl w-full">
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-12 text-center">
+          <div className="max-w-5xl w-full max-h-[90vh] overflow-y-auto custom-scrollbar px-2">
+            <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tighter mb-8 md:mb-12 text-center">
               The <span className="text-neon-green">Directory</span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 pb-12">
               {team.map((member, idx) => (
                 <div key={idx} className={`p-8 bg-white/[0.03] border-2 ${member.border} rounded-3xl hover:bg-white/[0.05] transition-all duration-300 group`}>
                   <div className="mb-6">
