@@ -276,7 +276,7 @@ export default function Page() {
 
       {/* Footer */}
       <footer className="border-t-2 border-white/10 py-12 text-center">
-        <h2 className="text-4xl sm:text-6xl md:text-9xl font-black text-white/20 uppercase tracking-tighter select-none">
+        <h2 className="text-[12vw] sm:text-[10vw] md:text-9xl font-black text-white/5 uppercase tracking-tighter select-none px-4 overflow-hidden leading-none">
           Founderscult
         </h2>
         <p className="text-white/40 mt-4 font-medium uppercase tracking-widest text-sm">
