@@ -1,12 +1,40 @@
 'use client';
 
 import { useState } from 'react';
-import { Sparkles, Users, Lightbulb, ArrowRight, Code, Linkedin } from 'lucide-react';
+import { Sparkles, Users, Lightbulb, ArrowRight, Code, Linkedin, X } from 'lucide-react';
 
 export default function Page() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [showDirectory, setShowDirectory] = useState(false);
+
+  const team = [
+    {
+      name: "Dhruv Pradeep",
+      role: "Co-founder CEO",
+      intro: "A visionary leader focused on building India's next generation of founders. Passionate about high agency and zero-to-one building.",
+      linkedin: "https://www.linkedin.com/in/dhruv-pradeep-b40757344/",
+      color: "text-neon-blue",
+      border: "border-neon-blue"
+    },
+    {
+      name: "Sharan S",
+      role: "Co-founder CTO",
+      intro: "Technical mastermind architecting the future of collaborative building. Expert in full-stack systems and high-scale applications.",
+      linkedin: "https://www.linkedin.com/in/sharan-s-6278b3360/",
+      color: "text-neon-green",
+      border: "border-neon-green"
+    },
+    {
+      name: "R.R Naveen Raj",
+      role: "AI Engineer",
+      intro: "Pushing the boundaries of AI-assisted building. Crafting the intelligence that powers the Founderscult network.",
+      linkedin: "https://www.linkedin.com/in/r-r-naveen-raj-b7247a304",
+      color: "text-neon-purple",
+      border: "border-neon-purple"
+    }
+  ];
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,8 +74,19 @@ export default function Page() {
           Founderscult
         </div>
 
-        <div className="flex gap-4 items-center">
-          <a href="#" className="text-white/60 hover:text-neon-blue transition-colors">
+        <div className="flex gap-6 items-center">
+          <button 
+            onClick={() => setShowDirectory(true)}
+            className="text-white/60 hover:text-neon-green font-bold uppercase tracking-widest text-xs sm:text-sm transition-colors"
+          >
+            Directories
+          </button>
+          <a 
+            href="https://www.linkedin.com/company/founderscult/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-white/60 hover:text-neon-blue transition-colors"
+          >
             <Linkedin className="w-5 h-5" />
             <span className="sr-only">LinkedIn</span>
           </a>
@@ -64,24 +103,7 @@ export default function Page() {
       <main className="relative z-10 pt-20 pb-32 px-6">
         <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
           
-          {/* Floating Student Pills */}
-          <a href="https://www.linkedin.com/in/dhruv-pradeep-b40757344/" target="_blank" rel="noopener noreferrer" className="absolute top-40 left-10 md:left-20 animate-bounce duration-[3000ms] hidden lg:flex items-center gap-2 bg-neon-blue text-black px-4 py-2 rounded-full font-bold border-2 border-black rotate-[-6deg] hover:scale-110 transition-transform cursor-pointer">
-            <span>Dhruv Pradeep</span>
-            <Linkedin className="w-4 h-4" />
-            <span className="text-xs opacity-75">• Co-founder CEO</span>
-          </a>
-
-          <a href="https://www.linkedin.com/in/sharan-s-6278b3360/" target="_blank" rel="noopener noreferrer" className="absolute top-60 right-10 md:right-32 animate-bounce duration-[4000ms] hidden lg:flex items-center gap-2 bg-neon-green text-black px-4 py-2 rounded-full font-bold border-2 border-black rotate-[4deg] hover:scale-110 transition-transform cursor-pointer">
-            <span>Sharan S</span>
-            <Linkedin className="w-4 h-4" />
-            <span className="text-xs opacity-75">• Co-founder CTO</span>
-          </a>
-
-          <a href="https://www.linkedin.com/in/r-r-naveen-raj-b7247a304" target="_blank" rel="noopener noreferrer" className="absolute top-[22rem] right-20 md:right-48 animate-bounce duration-[3500ms] hidden lg:flex items-center gap-2 bg-neon-purple text-black px-4 py-2 rounded-full font-bold border-2 border-black rotate-[-2deg] hover:scale-110 transition-transform cursor-pointer">
-            <span>R.R Naveen Raj</span>
-            <Linkedin className="w-4 h-4" />
-            <span className="text-xs opacity-75">• AI Engineer</span>
-          </a>
+          {/* Floating Section removed as requested */}
 
           <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2 text-sm font-bold text-neon-green uppercase tracking-widest mb-10">
             <Sparkles className="w-4 h-4" />
@@ -105,8 +127,8 @@ export default function Page() {
             <div className="absolute -inset-1 bg-gradient-to-r from-neon-green to-neon-blue rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
             <div className="relative bg-[#050505] p-2 rounded-full border-2 border-white/10 flex flex-col sm:flex-row gap-2">
               {subscribed ? (
-                <div className="w-full text-center px-4 py-4 text-neon-green font-bold">
-                  ✓ You're on the list!
+                <div className="w-full text-center px-4 py-4 text-neon-green font-bold animate-in fade-in zoom-in duration-500">
+                  ✦ Thank you for registering! Check your mail.
                 </div>
               ) : (
                 <form onSubmit={handleSubscribe} className="flex w-full gap-2">
@@ -133,7 +155,14 @@ export default function Page() {
 
           <div className="mt-8">
             <p className="text-white/40 font-medium text-sm">
-              <a href="#" className="hover:text-neon-green transition-colors underline underline-offset-4 font-bold">Join our community</a> to know more about the app.
+              <a 
+                href="https://chat.whatsapp.com/FrGV76OPyerGMw5MtOVQaB" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-neon-green transition-colors underline underline-offset-4 font-bold"
+              >
+                Join our community
+              </a> to know more about the app.
             </p>
           </div>
         </div>
@@ -247,13 +276,54 @@ export default function Page() {
 
       {/* Footer */}
       <footer className="border-t-2 border-white/10 py-12 text-center">
-        <h2 className="text-6xl md:text-9xl font-black text-white/5 uppercase tracking-tighter select-none">
+        <h2 className="text-4xl sm:text-6xl md:text-9xl font-black text-white/20 uppercase tracking-tighter select-none">
           Founderscult
         </h2>
         <p className="text-white/40 mt-4 font-medium uppercase tracking-widest text-sm">
           Designed for Builders. Built for India’s next wave of founders.
         </p>
       </footer>
+
+      {/* Team Directory Overlay */}
+      {showDirectory && (
+        <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl animate-in fade-in duration-300 flex items-center justify-center p-6">
+          <button 
+            onClick={() => setShowDirectory(false)}
+            className="absolute top-8 right-8 text-white/40 hover:text-white transition-colors"
+          >
+            <X className="w-8 h-8" />
+          </button>
+
+          <div className="max-w-5xl w-full">
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-12 text-center">
+              The <span className="text-neon-green">Directory</span>
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {team.map((member, idx) => (
+                <div key={idx} className={`p-8 bg-white/[0.03] border-2 ${member.border} rounded-3xl hover:bg-white/[0.05] transition-all duration-300 group`}>
+                  <div className="mb-6">
+                    <h3 className={`text-2xl font-black uppercase ${member.color} mb-1`}>{member.name}</h3>
+                    <p className="text-white/40 text-xs font-bold uppercase tracking-widest">{member.role}</p>
+                  </div>
+                  <p className="text-white/70 font-medium leading-relaxed mb-8">
+                    {member.intro}
+                  </p>
+                  <a 
+                    href={member.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors font-bold uppercase text-xs tracking-widest"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                    Connect
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
