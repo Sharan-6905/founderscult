@@ -271,6 +271,28 @@ export default function Page() {
               </div>
             </div>
           </div>
+
+          <div className="p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-pink border-b-neon-pink rotate-[1deg] hover:rotate-0 transition-transform">
+            <p className="text-lg font-medium mb-6 italic">"The feedback loop here is insane. Posted a raw idea and got 5 people wanting to build it with me."</p>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-neon-pink" />
+              <div>
+                <p className="font-black uppercase text-sm">Vikram Singh</p>
+                <p className="text-xs text-white/40">AI Researcher</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-blue border-b-neon-blue rotate-[-1deg] hover:rotate-0 transition-transform">
+            <p className="text-lg font-medium mb-6 italic">"No superficial networking. Just hardcore building and high agency individuals pushing each other."</p>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-neon-blue" />
+              <div>
+                <p className="font-black uppercase text-sm">Neha Reddy</p>
+                <p className="text-xs text-white/40">Student Entrepreneur</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
