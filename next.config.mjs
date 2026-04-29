@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'https://founderscult.onrender.com/api/:path*',
-      },
-    ];
+    return {
+      beforeFiles: [
+        {
+          source: '/api/:path*',
+          destination: 'https://founderscult.onrender.com/api/:path*',
+        },
+      ],
+    };
   },
 };
 
