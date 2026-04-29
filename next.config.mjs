@@ -1,15 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  async rewrites() {
-    return {
-      beforeFiles: [
-        {
-          source: '/api/:path*',
-          destination: 'https://founderscult.onrender.com/api/:path*',
-        },
-      ],
-    };
-  },
-};
+const nextConfig = {};
 
 export default nextConfig;
