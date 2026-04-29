@@ -362,60 +362,62 @@ export default function Page() {
       )}
       {/* Feature Details Overlay */}
       {activeFeature && (
-        <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl animate-in fade-in duration-300 flex items-center justify-center p-6">
-          <button 
-            onClick={() => setActiveFeature(null)}
-            className="absolute top-8 right-8 text-white/40 hover:text-white transition-colors"
-          >
-            <X className="w-8 h-8" />
-          </button>
+        <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl animate-in fade-in duration-300 flex items-center justify-center p-4 sm:p-6">
+          <div className="max-w-3xl w-full max-h-[85vh] bg-[#0a0a0a] border-2 border-white/10 rounded-3xl relative overflow-hidden flex flex-col">
+            <button 
+              onClick={() => setActiveFeature(null)}
+              className="absolute top-4 right-4 sm:top-8 sm:right-8 z-[110] bg-white/5 p-2 rounded-full text-white/60 hover:text-white transition-colors hover:bg-white/10"
+            >
+              <X className="w-6 h-6 sm:w-8 sm:h-8" />
+            </button>
+            
+            <div className="overflow-y-auto custom-scrollbar p-6 sm:p-8 md:p-16 relative z-10 w-full h-full">
+              {activeFeature === 'ideas' && (
+                <>
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-neon-green/10 blur-[100px] rounded-full pointer-events-none" />
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-neon-green text-black rounded-full flex items-center justify-center mb-6 sm:mb-8 relative z-10">
+                    <Lightbulb className="w-8 h-8 sm:w-10 sm:h-10" />
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase mb-6 text-white relative z-10 pr-12">
+                    Post Raw <span className="text-neon-green">Ideas</span>
+                  </h2>
+                  <div className="space-y-4 sm:space-y-6 text-white/70 text-base sm:text-lg leading-relaxed relative z-10">
+                    <p>
+                      Founderscult gives you a safe space to test the waters with your earliest, unpolished thoughts. You don't need a pitch deck, a business model, or even a prototype.
+                    </p>
+                    <p>
+                      Just drop a few sentences about what you want to build. Let the community challenge your assumptions, validate the problem, and brainstorm solutions with you. It's the ultimate sandbox for zero-to-one thinking.
+                    </p>
+                    <p className="font-bold text-white">
+                      Stop overthinking. Start posting.
+                    </p>
+                  </div>
+                </>
+              )}
 
-          <div className="max-w-3xl w-full p-8 md:p-16 bg-[#0a0a0a] border-2 border-white/10 rounded-3xl relative overflow-hidden">
-            {activeFeature === 'ideas' && (
-              <>
-                <div className="absolute top-0 right-0 w-64 h-64 bg-neon-green/10 blur-[100px] rounded-full pointer-events-none" />
-                <div className="w-20 h-20 bg-neon-green text-black rounded-full flex items-center justify-center mb-8">
-                  <Lightbulb className="w-10 h-10" />
-                </div>
-                <h2 className="text-4xl md:text-5xl font-black uppercase mb-6 text-white">
-                  Post Raw <span className="text-neon-green">Ideas</span>
-                </h2>
-                <div className="space-y-6 text-white/70 text-lg leading-relaxed">
-                  <p>
-                    Founderscult gives you a safe space to test the waters with your earliest, unpolished thoughts. You don't need a pitch deck, a business model, or even a prototype.
-                  </p>
-                  <p>
-                    Just drop a few sentences about what you want to build. Let the community challenge your assumptions, validate the problem, and brainstorm solutions with you. It's the ultimate sandbox for zero-to-one thinking.
-                  </p>
-                  <p className="font-bold text-white">
-                    Stop overthinking. Start posting.
-                  </p>
-                </div>
-              </>
-            )}
-
-            {activeFeature === 'hustlers' && (
-              <>
-                <div className="absolute top-0 right-0 w-64 h-64 bg-neon-blue/10 blur-[100px] rounded-full pointer-events-none" />
-                <div className="w-20 h-20 rounded-2xl bg-neon-blue/20 flex items-center justify-center mb-8">
-                  <Users className="w-10 h-10 text-neon-blue" />
-                </div>
-                <h2 className="text-4xl md:text-5xl font-black uppercase mb-6 text-white">
-                  Find <span className="text-neon-blue">Hustlers</span>
-                </h2>
-                <div className="space-y-6 text-white/70 text-lg leading-relaxed">
-                  <p>
-                    Stop scrolling LinkedIn for co-founders. Our network is exclusively filled with high-agency students who are heavily biased toward action.
-                  </p>
-                  <p>
-                    Whether you need a technical mastermind to architect the MVP, a design prodigy to craft a stunning UI, or a marketing powerhouse to acquire your first 100 users, you'll find your people here.
-                  </p>
-                  <p className="font-bold text-white">
-                    Filter by skills, check out their previous raw ideas, and start building together today.
-                  </p>
-                </div>
-              </>
-            )}
+              {activeFeature === 'hustlers' && (
+                <>
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-neon-blue/10 blur-[100px] rounded-full pointer-events-none" />
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-neon-blue/20 flex items-center justify-center mb-6 sm:mb-8 relative z-10">
+                    <Users className="w-8 h-8 sm:w-10 sm:h-10 text-neon-blue" />
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase mb-6 text-white relative z-10 pr-12">
+                    Find <span className="text-neon-blue">Hustlers</span>
+                  </h2>
+                  <div className="space-y-4 sm:space-y-6 text-white/70 text-base sm:text-lg leading-relaxed relative z-10">
+                    <p>
+                      Stop scrolling LinkedIn for co-founders. Our network is exclusively filled with high-agency students who are heavily biased toward action.
+                    </p>
+                    <p>
+                      Whether you need a technical mastermind to architect the MVP, a design prodigy to craft a stunning UI, or a marketing powerhouse to acquire your first 100 users, you'll find your people here.
+                    </p>
+                    <p className="font-bold text-white">
+                      Filter by skills, check out their previous raw ideas, and start building together today.
+                    </p>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
       )}
