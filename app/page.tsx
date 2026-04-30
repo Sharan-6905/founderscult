@@ -22,7 +22,7 @@ export default function Page() {
     {
       name: "Sharan S",
       role: "Co-founder CTO",
-      intro: "Technical mastermind architecting the future of collaborative building. Expert in full-stack systems and high-scale applications.",
+      intro: "Somewhere between code and chaos I build what doesn't exist yet. Shaping ideas into systems before they're fully understood",
       linkedin: "https://www.linkedin.com/in/sharan-s-6278b3360/",
       color: "text-neon-green",
       border: "border-neon-green"
