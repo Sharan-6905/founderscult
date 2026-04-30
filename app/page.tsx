@@ -14,7 +14,7 @@ export default function Page() {
     {
       name: "Dhruv Pradeep",
       role: "Co-founder CEO",
-      intro: "A visionary leader focused on building India's next generation of founders. Passionate about high agency and zero-to-one building.",
+      intro: "A college dropout, building life from scratch. High-agency, obsessed with turning ideas into execution. Building FoundersCult to bridge ideas with the right resources. A visionary leader focused on building India’s next generation of founders",
       linkedin: "https://www.linkedin.com/in/dhruv-pradeep-b40757344/",
       color: "text-neon-blue",
       border: "border-neon-blue"
@@ -39,7 +39,7 @@ export default function Page() {
       name: "Lethesh Sudhakar",
       role: "Data Analyst",
       intro: "Uncovering insights from complex data. Turning raw numbers into actionable strategies for the Founderscult ecosystem.",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/lethesh-sudhakar-731499375/",
       color: "text-neon-pink",
       border: "border-neon-pink"
     }
@@ -84,16 +84,16 @@ export default function Page() {
         </div>
 
         <div className="flex gap-3 sm:gap-6 items-center">
-          <button 
+          <button
             onClick={() => setShowDirectory(true)}
             className="text-white/60 hover:text-neon-green font-bold uppercase tracking-widest text-[10px] sm:text-sm transition-colors"
           >
             Directories
           </button>
-          <a 
-            href="https://www.linkedin.com/company/founderscult/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://www.linkedin.com/company/founderscult/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white/60 hover:text-neon-blue transition-colors"
           >
             <Linkedin className="w-5 h-5" />
@@ -101,7 +101,7 @@ export default function Page() {
           </a>
           <a href="https://x.com/TheFoundersCult?s=20" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
             </svg>
             <span className="sr-only">X (Twitter)</span>
           </a>
@@ -111,7 +111,7 @@ export default function Page() {
       {/* Hero Section */}
       <main className="relative z-10 pt-20 pb-32 px-6">
         <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
-          
+
           {/* Floating Section removed as requested */}
 
           <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2 text-sm font-bold text-neon-green uppercase tracking-widest mb-10">
@@ -120,10 +120,10 @@ export default function Page() {
           </div>
 
           <h1 className="text-4xl sm:text-7xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-[0.9] mb-8 uppercase">
-            Where <br/>
+            Where <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-green via-neon-blue to-neon-purple">
               Ideas
-            </span> <br/>
+            </span> <br />
             Find Builders.
           </h1>
 
@@ -164,10 +164,10 @@ export default function Page() {
 
           <div className="mt-8">
             <p className="text-white/40 font-medium text-sm">
-              <a 
-                href="https://chat.whatsapp.com/FrGV76OPyerGMw5MtOVQaB" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://chat.whatsapp.com/FrGV76OPyerGMw5MtOVQaB"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-neon-green transition-colors underline underline-offset-4 font-bold"
               >
                 Join our community
@@ -184,7 +184,7 @@ export default function Page() {
           <span>Find Co-Founders</span> <span className="text-neon-blue">✦</span>
           <span>High Agency</span> <span className="text-neon-purple">✦</span>
           <span>Zero Judgment</span> <span className="text-neon-pink">✦</span>
-          
+
           {/* Duplicate for seamless looping */}
           <span>Post Raw Ideas</span> <span className="text-neon-green">✦</span>
           <span>Find Co-Founders</span> <span className="text-neon-blue">✦</span>
@@ -201,7 +201,7 @@ export default function Page() {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <button 
+          <button
             onClick={() => setActiveFeature('ideas')}
             className="text-left bg-[#0a0a0a] p-8 rounded-3xl border-2 border-white/5 hover:border-neon-green hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
           >
@@ -218,7 +218,7 @@ export default function Page() {
             </div>
           </button>
 
-          <button 
+          <button
             onClick={() => setActiveFeature('hustlers')}
             className="text-left group p-8 rounded-3xl border-2 border-white/5 bg-white/[0.02] hover:bg-neon-blue/5 hover:border-neon-blue/50 transition-all duration-500 cursor-pointer"
           >
@@ -242,7 +242,7 @@ export default function Page() {
         <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-16 text-center">
           What the <span className="text-neon-pink">Cult</span> says.
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-green border-b-neon-green">
             <p className="text-lg font-medium mb-6 italic">"Found my technical co-founder in 2 days. We're now shipping our MVP. No fluff, just builders."</p>
@@ -278,7 +278,7 @@ export default function Page() {
           </div>
 
           <div className="p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-pink border-b-neon-pink">
-            <p className="text-lg font-medium mb-6 italic">"The feedback loop here is insane. Posted a raw idea and got 5 people wanting to build it with me."</p>
+            <p className="text-lg font-medium mb-6 italic">"Founderscult is exactly what the Indian startup ecosystem needs. Found incredibly smart engineers to collaborate with on complex AI problems within days."</p>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-neon-pink" />
               <div>
@@ -314,7 +314,7 @@ export default function Page() {
       {/* Team Directory Overlay */}
       {showDirectory && (
         <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl animate-in fade-in duration-300 flex items-center justify-center p-6">
-          <button 
+          <button
             onClick={() => setShowDirectory(false)}
             className="absolute top-8 right-8 text-white/40 hover:text-white transition-colors"
           >
@@ -330,7 +330,7 @@ export default function Page() {
                 Meet the founders and team behind the cult.
               </p>
               <div className="animate-bounce flex flex-col items-center text-white/40 mt-8">
-                <span className="text-xs uppercase tracking-widest font-bold mb-2 text-center">Scroll down to view<br/>About Us</span>
+                <span className="text-xs uppercase tracking-widest font-bold mb-2 text-center">Scroll down to view<br />About Us</span>
                 <svg className="w-6 h-6 mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
               </div>
             </div>
@@ -345,9 +345,9 @@ export default function Page() {
                   <p className="text-white/70 font-medium text-lg md:text-xl leading-relaxed mb-12 max-w-2xl">
                     {member.intro}
                   </p>
-                  <a 
-                    href={member.linkedin} 
-                    target="_blank" 
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className={`inline-flex items-center gap-3 px-6 py-3 rounded-full border-2 ${member.border} ${member.color} hover:bg-white/[0.1] transition-colors font-bold uppercase text-sm tracking-widest`}
                   >
@@ -364,13 +364,13 @@ export default function Page() {
       {activeFeature && (
         <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl animate-in fade-in duration-300 flex items-center justify-center p-4 sm:p-6">
           <div className="max-w-3xl w-full max-h-[85vh] bg-[#0a0a0a] border-2 border-white/10 rounded-3xl relative overflow-hidden flex flex-col">
-            <button 
+            <button
               onClick={() => setActiveFeature(null)}
               className="absolute top-4 right-4 sm:top-8 sm:right-8 z-[110] bg-white/5 p-2 rounded-full text-white/60 hover:text-white transition-colors hover:bg-white/10"
             >
               <X className="w-6 h-6 sm:w-8 sm:h-8" />
             </button>
-            
+
             <div className="overflow-y-auto custom-scrollbar p-6 sm:p-8 md:p-16 relative z-10 w-full h-full">
               {activeFeature === 'ideas' && (
                 <>
