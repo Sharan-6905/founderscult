@@ -47,7 +47,7 @@ export default function Page() {
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email || !emailRegex.test(email)) {
       alert('Please enter a valid email address');
@@ -213,7 +213,7 @@ export default function Page() {
           </div>
           <div className="space-y-8">
             <p className="text-xl md:text-2xl text-white/80 font-medium leading-snug">
-              FoundersCult isn't just another platform—it's a foundry for India's high-agency students. We're here to bridge the gap between "what if" and "it's live."
+              FoundersCult isn't just another platform—it's a foundry for India's high-agency hustlers. We're here to bridge the gap between "what if" and "it's live."
             </p>
             <div className="space-y-4">
               <p className="text-lg text-white/50 leading-relaxed">
