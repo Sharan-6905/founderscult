@@ -158,7 +158,7 @@ export default function Page() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="your@student.edu.in"
+                    placeholder="Enter your mail ID here"
                     className="flex-1 bg-transparent px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base text-white placeholder:text-white/30 focus:outline-none font-medium"
                     required
                   />
