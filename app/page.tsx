@@ -350,6 +350,9 @@ export default function Page() {
         <p className="text-white/40 mt-4 font-medium uppercase tracking-widest text-sm">
           Designed for Builders. Built for India’s next wave of founders.
         </p>
+        <p className="text-white/30 mt-8 text-xs font-medium">
+          Have queries? Reach out at <a href="mailto:hello@founderscult.in" className="text-neon-green hover:underline">hello@founderscult.in</a>
+        </p>
       </footer>
 
       {/* Team Directory Overlay */}
