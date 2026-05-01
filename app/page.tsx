@@ -198,6 +198,34 @@ export default function Page() {
         </div>
       </div>
 
+      {/* Vision & Goal Section */}
+      <section className="max-w-7xl mx-auto px-6 py-32 border-b border-white/5">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-none">
+              Building for <br />
+              <span className="text-neon-green">The Outliers.</span>
+            </h2>
+            <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-6 py-3">
+              <div className="w-2 h-2 rounded-full bg-neon-green animate-pulse" />
+              <span className="text-xs font-black uppercase tracking-widest">Our Mission</span>
+            </div>
+          </div>
+          <div className="space-y-8">
+            <p className="text-xl md:text-2xl text-white/80 font-medium leading-snug">
+              FoundersCult isn't just another platform—it's a foundry for India's high-agency students. We're here to bridge the gap between "what if" and "it's live."
+            </p>
+            <div className="space-y-4">
+              <p className="text-lg text-white/50 leading-relaxed">
+                Our goal is to kill the "someday" mindset. We provide a space where messy, raw ideas meet the technical muscle needed to build them.
+              </p>
+              <p className="text-lg text-white/50 leading-relaxed">
+                We're hunting for the outliers: the ones building at 3 AM, the ones experimenting in cafeteria corners, and the ones who aren't waiting for a degree to start shaping the future.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Features Grid */}
       <section className="max-w-7xl mx-auto px-6 py-32">
