@@ -339,6 +339,13 @@ export default function Page() {
         <h2 className="text-[12vw] sm:text-[10vw] md:text-9xl font-black text-white/5 uppercase tracking-tighter select-none px-4 overflow-hidden leading-none">
           Founderscult
         </h2>
+        <div className="relative inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full px-6 py-2 mb-8 overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-r from-neon-green/10 via-neon-blue/10 to-neon-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="w-2 h-2 rounded-full bg-neon-green animate-pulse shadow-[0_0_8px_rgba(0,255,136,0.5)]" />
+          <span className="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] text-white/80 relative z-10">
+            Coming Soon
+          </span>
+        </div>
         <p className="text-white/40 mt-4 font-medium uppercase tracking-widest text-sm">
           Designed for Builders. Built for India’s next wave of founders.
         </p>
