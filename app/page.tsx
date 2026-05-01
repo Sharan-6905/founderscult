@@ -30,7 +30,7 @@ export default function Page() {
     {
       name: "R.R Naveen Raj",
       role: "AI Engineer",
-      intro: "Pushing the boundaries of AI-assisted building. Crafting the intelligence that powers the Founderscult network.",
+      intro: "Driven by curiosity and a deep interest in intelligent systems, Naveen focuses on building AI that actually solves real problems. He works on shaping the technical backbone of FoundersCult, experimenting with how AI can simplify decision-making and enhance user experiences. His goal is to push beyond just using AI tools — to build systems that make the platform smarter, more adaptive, and truly impactful.",
       linkedin: "https://www.linkedin.com/in/r-r-naveen-raj-b7247a304",
       color: "text-neon-purple",
       border: "border-neon-purple"
@@ -38,7 +38,7 @@ export default function Page() {
     {
       name: "Lethesh Sudhakar",
       role: "Data Analyst",
-      intro: "Uncovering insights from complex data. Turning raw numbers into actionable strategies for the Founderscult ecosystem.",
+      intro: "With a sharp eye for patterns and insights, Lethesh turns raw data into meaningful direction. He focuses on understanding user behavior and extracting signals that help FoundersCult grow in the right way. From numbers to strategy, his role is to ensure decisions are backed by clarity, helping the platform evolve with purpose rather than guesswork.",
       linkedin: "https://www.linkedin.com/in/lethesh-sudhakar-731499375/",
       color: "text-neon-pink",
       border: "border-neon-pink"
