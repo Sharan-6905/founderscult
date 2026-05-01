@@ -276,8 +276,8 @@ export default function Page() {
           What the <span className="text-neon-pink">Cult</span> says.
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-green border-b-neon-green">
+        <div className="flex flex-wrap justify-center gap-8">
+          <div className="w-full md:max-w-[calc(33.333%-22px)] p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-green border-b-neon-green">
             <p className="text-lg font-medium mb-6 italic">"Found my technical co-founder in 2 days. We're now shipping our MVP. No fluff, just builders."</p>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-neon-green" />
@@ -288,7 +288,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-blue border-b-neon-blue">
+          <div className="w-full md:max-w-[calc(33.333%-22px)] p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-blue border-b-neon-blue">
             <p className="text-lg font-medium mb-6 italic">"Finally a community for India's real builders. The high agency vibe here is unmatched."</p>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-neon-blue" />
@@ -299,7 +299,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-purple border-b-neon-purple">
+          <div className="w-full md:max-w-[calc(33.333%-22px)] p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-purple border-b-neon-purple">
             <p className="text-lg font-medium mb-6 italic">"The best place to find builders who actually care about shipping, not just social media clout."</p>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-neon-purple" />
@@ -310,7 +310,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-pink border-b-neon-pink">
+          <div className="w-full md:max-w-[calc(33.333%-22px)] p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-pink border-b-neon-pink">
             <p className="text-lg font-medium mb-6 italic">"Founderscult is exactly what the Indian startup ecosystem needs. Found incredibly smart engineers to collaborate with on complex AI problems within days."</p>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-neon-pink" />
@@ -321,7 +321,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-blue border-b-neon-blue">
+          <div className="w-full md:max-w-[calc(33.333%-22px)] p-8 bg-white/[0.03] border-2 border-black border-r-4 border-b-4 border-r-neon-blue border-b-neon-blue">
             <p className="text-lg font-medium mb-6 italic">"No superficial networking. Just hardcore building and high agency individuals pushing each other."</p>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-neon-blue" />
