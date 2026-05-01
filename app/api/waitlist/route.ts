@@ -61,8 +61,8 @@ export async function POST(req: Request) {
       data: { email },
     });
 
-    // Send email (non-blocking)
-    sendBrevoEmail(email); // no await → faster response
+    // Send email
+    await sendBrevoEmail(email); 
 
     return NextResponse.json({ success: true, data: newWaitlist }, { status: 201 });
 
