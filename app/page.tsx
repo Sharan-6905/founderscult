@@ -22,7 +22,7 @@ export default function Page() {
     {
       name: "Sharan S",
       role: "Co-founder CTO",
-      intro: "Somewhere between code and chaos I build what doesn't exist yet. Shaping ideas into systems before they're fully understood",
+      intro: "Just an average student trying to figure things out, but choosing to build instead of waiting. Co-creating FoundersCult to give students a space to pitch ideas, connect, and take their first step into entrepreneurship. The vision is to find hustlers who are ready to build, not just talk",
       linkedin: "https://www.linkedin.com/in/sharan-s-6278b3360/",
       color: "text-neon-green",
       border: "border-neon-green"
