@@ -85,12 +85,12 @@ export default function Page() {
       {/* Floating Header */}
       <header className="relative z-50 p-4 sm:p-6 flex justify-between items-center">
         <div className="flex flex-col">
-          <div className="text-lg sm:text-2xl font-black tracking-tighter uppercase leading-none">
+          <div className="text-2xl sm:text-4xl font-black tracking-tighter uppercase leading-none">
             Founderscult
           </div>
-          <div className="flex items-center gap-2 mt-1.5 px-0.5">
-            <div className="w-1.5 h-1.5 rounded-full bg-neon-green animate-pulse shadow-[0_0_8px_rgba(0,255,136,0.5)]" />
-            <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-white/40">
+          <div className="flex items-center gap-2 mt-2 px-0.5">
+            <div className="w-2 h-2 rounded-full bg-neon-green animate-pulse shadow-[0_0_10px_rgba(0,255,136,0.5)]" />
+            <span className="text-[10px] sm:text-xs font-black uppercase tracking-[0.4em] text-neon-green/80">
               Coming Soon
             </span>
           </div>
