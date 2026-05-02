@@ -14,7 +14,7 @@ async function sendBrevoEmail(toEmail: string) {
       },
       body: JSON.stringify({
         sender: {
-          name: 'Neha from FoundersCult',
+          name: 'Vibha from FoundersCult',
           email: process.env.BREVO_SENDER_EMAIL as string, // MUST match verified sender
         },
         to: [{ email: toEmail }],
@@ -22,7 +22,7 @@ async function sendBrevoEmail(toEmail: string) {
         htmlContent: `
           <div style="font-family: 'Segoe UI', sans-serif; background-color: #050505; color: white; padding: 40px; border-radius: 16px; max-width: 600px; margin: 0 auto;">
             <h1 style="text-transform: uppercase; letter-spacing: -2px; font-weight: 900; font-size: 32px; color: #00ff88; margin-bottom: 8px;">Founderscult</h1>
-            <p style="font-size: 18px; color: #cccccc; margin-bottom: 16px;">Hello! This is Neha from FoundersCult. 👋</p>
+            <p style="font-size: 18px; color: #cccccc; margin-bottom: 16px;">Hello! This is Vibha from FoundersCult. 👋</p>
             <p style="font-size: 16px; color: #e0e0e0; line-height: 1.6;">
               Thank you so much for joining the cult! You're now part of an exclusive community of high-agency builders shaping India's next wave of startups. 
             </p>
