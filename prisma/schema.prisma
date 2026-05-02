@@ -12,5 +12,7 @@ generator client {
 model Waitlist {
   id        String   @id @default(cuid())
   email     String   @unique
+  name      String?
+  contact   String?
   createdAt DateTime @default(now())
 }

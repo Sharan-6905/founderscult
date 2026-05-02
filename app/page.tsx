@@ -4,7 +4,10 @@ import { useState } from 'react';
 import { Sparkles, Users, Lightbulb, ArrowRight, Code, Linkedin, X } from 'lucide-react';
 
 export default function Page() {
+  const [name, setName] = useState('');
+  const [contact, setContact] = useState('');
   const [email, setEmail] = useState('');
+  const [showJoinModal, setShowJoinModal] = useState(false);
   const [subscribed, setSubscribed] = useState(false);
   const [loading, setLoading] = useState(false);
   const [showDirectory, setShowDirectory] = useState(false);
@@ -59,7 +62,7 @@ export default function Page() {
       const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ name, contact, email })
       });
 
       const data = await response.json();
@@ -144,33 +147,22 @@ export default function Page() {
             Not content. Not clout. Just building. <br className="hidden md:block" /> Founderscult is where India's next startups begin.
           </p>
 
-          {/* Waitlist Form */}
+          {/* Waitlist Form Replacement - Just the Join Button */}
           <div className="w-full max-w-md relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-neon-green to-neon-blue rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
-            <div className="relative bg-[#050505] p-2 rounded-full border-2 border-white/10 flex flex-col sm:flex-row gap-2">
+            <div className="absolute -inset-1 bg-gradient-to-r from-neon-green to-neon-blue rounded-full blur opacity-50 group-hover:opacity-100 transition duration-1000"></div>
+            <div className="relative">
               {subscribed ? (
-                <div className="w-full text-center px-4 py-4 text-neon-green font-bold animate-in fade-in zoom-in duration-500">
+                <div className="w-full text-center bg-[#050505] rounded-full px-4 py-4 text-neon-green font-bold animate-in fade-in zoom-in duration-500">
                   ✦ Thank you for registering! Check your mail.
                 </div>
               ) : (
-                <form onSubmit={handleSubscribe} className="flex w-full gap-2">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your mail ID here"
-                    className="flex-1 bg-transparent px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base text-white placeholder:text-white/30 focus:outline-none font-medium"
-                    required
-                  />
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="bg-white text-black font-black uppercase px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-neon-green transition-colors whitespace-nowrap flex items-center gap-2 text-xs sm:text-sm"
-                  >
-                    {loading ? 'Joining...' : 'Join Cult'}
-                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </button>
-                </form>
+                <button
+                  onClick={() => setShowJoinModal(true)}
+                  className="w-full bg-white text-black font-black uppercase px-6 sm:px-8 py-4 sm:py-5 rounded-full hover:bg-neon-green transition-colors flex items-center justify-center gap-2 text-sm sm:text-base border-2 border-white hover:border-neon-green"
+                >
+                  Join The Cult
+                  <ArrowRight className="w-5 h-5" />
+                </button>
               )}
             </div>
           </div>
@@ -460,6 +452,83 @@ export default function Page() {
                     </p>
                   </div>
                 </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Join Cult Modal Overlay */}
+      {showJoinModal && (
+        <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl animate-in fade-in duration-300 flex items-center justify-center p-4 sm:p-6">
+          <div className="max-w-md w-full bg-[#0a0a0a] border-2 border-white/10 rounded-3xl relative overflow-hidden flex flex-col shadow-2xl shadow-neon-green/10">
+            <button
+              onClick={() => setShowJoinModal(false)}
+              className="absolute top-4 right-4 z-[110] bg-white/5 p-2 rounded-full text-white/60 hover:text-white transition-colors hover:bg-white/10"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <div className="p-8 relative z-10 w-full">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-neon-green/10 blur-[100px] rounded-full pointer-events-none" />
+              <h2 className="text-3xl font-black uppercase mb-2 text-white relative z-10">
+                Join The <span className="text-neon-green">Cult</span>
+              </h2>
+              <p className="text-white/60 font-medium mb-6 relative z-10">
+                Drop your details below to become a part of India's most high-agency builder community.
+              </p>
+              
+              {subscribed ? (
+                <div className="text-center p-8 bg-white/5 border border-neon-green/30 rounded-2xl relative z-10">
+                  <div className="w-16 h-16 bg-neon-green/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Sparkles className="w-8 h-8 text-neon-green" />
+                  </div>
+                  <h3 className="text-xl font-bold text-neon-green mb-2">Welcome to the Cult!</h3>
+                  <p className="text-white/70">Check your email for the next steps.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubscribe} className="space-y-4 relative z-10">
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-widest text-white/60 mb-2">Name</label>
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder=""
+                      className="w-full bg-[#050505] border-2 border-neon-green/30 rounded-xl px-4 py-3 text-white focus:border-neon-green focus:outline-none transition-colors"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-widest text-white/60 mb-2">Contact Details</label>
+                    <input
+                      type="text"
+                      value={contact}
+                      onChange={(e) => setContact(e.target.value)}
+                      placeholder=""
+                      className="w-full bg-[#050505] border-2 border-neon-green/30 rounded-xl px-4 py-3 text-white focus:border-neon-green focus:outline-none transition-colors"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold uppercase tracking-widest text-white/60 mb-2">Email Address</label>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder=""
+                      className="w-full bg-[#050505] border-2 border-neon-green/30 rounded-xl px-4 py-3 text-white focus:border-neon-green focus:outline-none transition-colors"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full bg-white text-black font-black uppercase px-6 py-4 rounded-xl hover:bg-neon-green transition-colors mt-2 flex justify-center items-center gap-2"
+                  >
+                    {loading ? 'Joining...' : 'Submit Details'}
+                    <ArrowRight className="w-5 h-5" />
+                  </button>
+                </form>
               )}
             </div>
           </div>

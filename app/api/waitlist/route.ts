@@ -51,7 +51,7 @@ async function sendBrevoEmail(toEmail: string) {
 
 export async function POST(req: Request) {
   try {
-    const { email } = await req.json();
+    const { name, contact, email } = await req.json();
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email || !emailRegex.test(email)) {
@@ -59,7 +59,7 @@ export async function POST(req: Request) {
     }
 
     const newWaitlist = await prisma.waitlist.create({
-      data: { email },
+      data: { name, contact, email },
     });
 
     // Send email
